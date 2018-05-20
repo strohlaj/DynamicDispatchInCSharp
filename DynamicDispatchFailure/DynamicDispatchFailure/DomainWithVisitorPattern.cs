@@ -1,4 +1,5 @@
-﻿using System;
+﻿using static System.Console;
+using System;
 
 namespace DomainWithVisitorPattern
 {
@@ -16,11 +17,11 @@ namespace DomainWithVisitorPattern
     {
         public void Attack()
         {
-            Console.WriteLine("Swung Sword");
+            WriteLine("Swung Sword");
         }
         public void Attack(string specialText)
         {
-            Console.WriteLine("special Sword swing text");
+            WriteLine("special Sword swing text");
         }
     }
 
@@ -28,7 +29,7 @@ namespace DomainWithVisitorPattern
     {
         public void Attack()
         {
-            Console.WriteLine("Swung Mace");
+            WriteLine("Swung Mace");
         }
     }
 

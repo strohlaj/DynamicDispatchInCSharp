@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace DomainWithDynamicDispatch
 {
@@ -18,7 +18,7 @@ namespace DomainWithDynamicDispatch
         }
         public void ResolveSwingWeapon(IWeapon weapon)
         {
-            Console.WriteLine("base swing weapon logic.");
+            WriteLine("base swing weapon logic.");
             weapon.Attack();
         }
     }
@@ -27,11 +27,11 @@ namespace DomainWithDynamicDispatch
     {
         public void Attack()
         {
-            Console.WriteLine("Swung Sword");
+            WriteLine("Swung Sword");
         }
         public void Attack(string specialText)
         {
-            Console.WriteLine("special Sword swing text");
+            WriteLine("special Sword swing text");
         }
     }
 
@@ -39,7 +39,7 @@ namespace DomainWithDynamicDispatch
     {
         public void Attack()
         {
-            Console.WriteLine("Swung Mace");
+            WriteLine("Swung Mace");
         }
     }
 
@@ -60,7 +60,7 @@ namespace DomainWithDynamicDispatch
         // yuck!
         public void ResolveSwingWeapon(Mace mace)
         {
-            Console.WriteLine("Some specific mace logic here");
+            WriteLine("Some specific mace logic here");
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-using System;
+using static System.Console;
 
 namespace DynamicDispatchFailure
 {
@@ -12,9 +12,7 @@ namespace DynamicDispatchFailure
     {
         public virtual void SwingWeapon(IWeapon weapon)
         {
-            dynamic wep = weapon;
-
-            Console.WriteLine("base swing weapon logic.");
+            WriteLine("base swing weapon logic.");
             weapon.Attack();
         }
     }
@@ -23,7 +21,7 @@ namespace DynamicDispatchFailure
     {
         public void Attack()
         {
-            Console.WriteLine("Swung Sword");
+            WriteLine("Swung Sword");
         }
     }
 
@@ -31,7 +29,7 @@ namespace DynamicDispatchFailure
     {
         public void Attack()
         {
-            Console.WriteLine("Swung Mace");
+            WriteLine("Swung Mace");
         }
     }
 
@@ -65,7 +63,7 @@ namespace DynamicDispatchFailure
         // IWeapon is resolved as a mace prior to going to the lookup table to find which method to call. 
         public void SwingWeapon(Mace mace)
         {
-            Console.WriteLine("Some specific mace logic here");
+            WriteLine("Some specific mace logic here");
         }
     }
 }
