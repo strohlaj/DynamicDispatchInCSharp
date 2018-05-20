@@ -1,0 +1,6 @@
+c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\bin\Debug\DynamicDispatchFailure.exe.config
+c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\bin\Debug\DynamicDispatchFailure.exe
+c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\bin\Debug\DynamicDispatchFailure.pdb
+c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.csprojResolveAssemblyReference.cache
+c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.exe
+c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.pdb
