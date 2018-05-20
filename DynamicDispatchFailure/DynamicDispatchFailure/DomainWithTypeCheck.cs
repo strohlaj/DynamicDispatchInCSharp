@@ -25,10 +25,6 @@ namespace DynamicDispatchFailure
         {
             Console.WriteLine("Swung Sword");
         }
-        public void Attack(string specialText)
-        {
-            Console.WriteLine("special Sword swing text");
-        }
     }
 
     class Mace : IWeapon
