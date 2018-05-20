@@ -21,18 +21,17 @@ namespace DynamicDispatchFailure
             murloc.SwingWeapon(mace);
 
 
-            DomainWithDynamicForDispatch.Enemy specialOgre = new DomainWithDynamicForDispatch.Ogre();
-            DomainWithDynamicForDispatch.Enemy specialMurloc = new DomainWithDynamicForDispatch.Murloc();
+            DomainWithDynamicDispatch.Enemy specialOgre = new DomainWithDynamicDispatch.Ogre();
+            DomainWithDynamicDispatch.Enemy specialMurloc = new DomainWithDynamicDispatch.Murloc();
 
-            DomainWithDynamicForDispatch.IWeapon specialSword = new DomainWithDynamicForDispatch.Sword();
-            DomainWithDynamicForDispatch.IWeapon specialMace = new DomainWithDynamicForDispatch.Mace();
+            DomainWithDynamicDispatch.IWeapon specialSword = new DomainWithDynamicDispatch.Sword();
+            DomainWithDynamicDispatch.IWeapon specialMace = new DomainWithDynamicDispatch.Mace();
 
             specialOgre.SwingWeapon(specialMace);
 
             specialMurloc.SwingWeapon(specialMace);
 
             Console.ReadLine();
-
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DomainWithDynamicForDispatch
+namespace DomainWithDynamicDispatch
 {
     interface IWeapon
     {
@@ -51,7 +51,8 @@ namespace DomainWithDynamicForDispatch
     class Murloc : Enemy
     {
 
-        // In this case we're bastardizing the dynamic keyword to create the ability to resolve the type at runtime to call the correct method. 
+        // In this case, inside the parent classes (Enemy) base implemententation, we're bastardizing
+        // the dynamic keyword to create the ability to resolve the type at runtime to call the correct method. 
         // Also, this requires the method to not be private (unless you do special reflective magic with as well in the base class)
         // yuck!
         public void ResolveSwingWeapon(Mace mace)

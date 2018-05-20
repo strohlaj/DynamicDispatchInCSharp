@@ -4,3 +4,9 @@ c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailur
 c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.csprojResolveAssemblyReference.cache
 c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.exe
 c:\users\aaronstrohl\documents\visual studio 2015\Projects\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.pdb
+C:\github\DynamicDispatchInCSharp\DynamicDispatchFailure\DynamicDispatchFailure\bin\Debug\DynamicDispatchFailure.exe.config
+C:\github\DynamicDispatchInCSharp\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.exe
+C:\github\DynamicDispatchInCSharp\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.pdb
+C:\github\DynamicDispatchInCSharp\DynamicDispatchFailure\DynamicDispatchFailure\bin\Debug\DynamicDispatchFailure.exe
+C:\github\DynamicDispatchInCSharp\DynamicDispatchFailure\DynamicDispatchFailure\bin\Debug\DynamicDispatchFailure.pdb
+C:\github\DynamicDispatchInCSharp\DynamicDispatchFailure\DynamicDispatchFailure\obj\Debug\DynamicDispatchFailure.csprojResolveAssemblyReference.cache

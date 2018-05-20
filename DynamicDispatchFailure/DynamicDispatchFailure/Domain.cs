@@ -54,8 +54,6 @@ namespace DynamicDispatchFailure
         // a generic constraint on the method, whose signature will change to SwingWeapon<T>(T weapon) where T : IWeapon 
         public override void SwingWeapon(IWeapon weapon)
         {
-            Console.WriteLine("Aaaaaughibbrgubugbugrguburgle!");
-
             if (weapon is Mace)
             {
                 SwingWeapon((Mace)weapon);
@@ -72,7 +70,6 @@ namespace DynamicDispatchFailure
         public void SwingWeapon(Mace mace)
         {
             Console.WriteLine("Some specific mace logic here");
-
         }
     }
 }
