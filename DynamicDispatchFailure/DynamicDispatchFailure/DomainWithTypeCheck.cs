@@ -1,7 +1,7 @@
 ﻿
 using static System.Console;
 
-namespace DynamicDispatchFailure
+namespace DomainWithTypeCheckApproach
 {
     interface IWeapon
     {
@@ -41,11 +41,10 @@ namespace DynamicDispatchFailure
     class Murloc : Enemy
     {
         // *Note this method uses pre C# 7 pattern matching*
-        // In a language that supports dynamic dispatch this logic would be totally unnecessary.
+        // In a language that supports multiple dispatch this logic would be totally unnecessary.
         // At runtime the correct 'specific' method associated with this class would be called i.e. swing weapon(Mace mace) 
         // e.g. an IWeapon of type mace and an Enemy of type murloc are called on one another like so: (enemy.SwingWeapon(weapon)) 
-        // In C# 7.1 Generic Pattern Matching may make this code slightly better by using a case-switch statement with
-        // a generic constraint on the method, whose signature will change to SwingWeapon<T>(T weapon) where T : IWeapon 
+        // In C# 7 Pattern Matching may make this code slightly better by using a case-switch statement matching on the type 
         public override void SwingWeapon(IWeapon weapon)
         {
             if (weapon is Mace)

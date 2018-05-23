@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-namespace DomainWithDynamicDispatch
+namespace DomainWithDynamicApproach
 {
     interface IWeapon
     {
@@ -9,7 +9,9 @@ namespace DomainWithDynamicDispatch
 
     abstract class Enemy
     {
-        // Please note, this is usually a bad idea. 
+        // This is really where the magic takes place.
+        // We're using the Dynamic Runtime Language to dispatch to the second derived type.
+        // The 'SwingWeapon' is responsible for the first dispatch.
         public void SwingWeapon(IWeapon weapon)
         {
             dynamic enemy = this;
@@ -28,10 +30,6 @@ namespace DomainWithDynamicDispatch
         public void Attack()
         {
             WriteLine("Swung Sword");
-        }
-        public void Attack(string specialText)
-        {
-            WriteLine("special Sword swing text");
         }
     }
 

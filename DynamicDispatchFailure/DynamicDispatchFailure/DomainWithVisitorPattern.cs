@@ -3,56 +3,74 @@ using System;
 
 namespace DomainWithVisitorPattern
 {
-    interface IWeapon
-    {
-        void Attack();
-    }
 
-    abstract class Enemy
+    abstract class WeaponVisitor
     {
-        public abstract void Accept(WeaponVisitor visitor);
-    }
+        internal abstract void Visit(Ogre ogre);
 
-    class Sword : IWeapon
-    {
-        public void Attack()
+        internal abstract void Visit(Murloc murloc);
+
+        protected internal void BaseVisit (IEnemy enemy)
         {
-            WriteLine("Swung Sword");
+            WriteLine("base swing weapon logic.");
         }
-        public void Attack(string specialText)
-        {
-            WriteLine("special Sword swing text");
-        }
+
     }
 
-    class Mace : IWeapon
+    /// <summary>
+    /// The 'Visitor'
+    /// </summary>
+    interface IEnemy
     {
-        public void Attack()
-        {
-            WriteLine("Swung Mace");
-        }
+        void SwingWeapon(WeaponVisitor weaponVisitor);
     }
 
-    class Ogre : Enemy
+    class Sword : WeaponVisitor
     {
-        // Does not implement anything special for swinging a sword or a mace.
-        public override void Accept(WeaponVisitor visitor)
+        internal override void Visit(Murloc murloc)
         {
-            throw new NotImplementedException();
+            Visit(murloc);
+        }
+
+        internal override void Visit(Ogre ogre)
+        {
+            Visit(ogre);
         }
     }
 
-    class Murloc : Enemy
+    class Mace : WeaponVisitor
     {
-        public override void Accept(WeaponVisitor visitor)
+        internal override void Visit(Murloc murloc)
         {
-            throw new NotImplementedException();
+            WriteLine("Some specific mace logic here");
+        }
+
+        internal override void Visit(Ogre ogre)
+        {
+            BaseVisit(ogre);
+            WriteLine("swung mace");
         }
     }
 
-    interface WeaponVisitor
+    /// <summary>
+    /// Depending on how we decide the 'visitor' 
+    /// </summary>
+    class Ogre : IEnemy
     {
-        void Visit(Mace mace);
-        void Visit(Sword mace);
+        // The 'IEnemy.SwingWeapon(WeaponVisitor visitor)' method is bound at run time and is considered the first dispatch. 
+        // However the calling visit(ogre) instead of visit(murloc) is determined at compile time and is 
+        // considered the 'second' dispatch. 
+        public void SwingWeapon(WeaponVisitor weaponVisitor)
+        {
+            weaponVisitor.Visit(this);
+        }
+    }
+
+    class Murloc : IEnemy
+    {
+        public void SwingWeapon(WeaponVisitor weaponVisitor)
+        {
+            weaponVisitor.Visit(this);
+        }
     }
 }
