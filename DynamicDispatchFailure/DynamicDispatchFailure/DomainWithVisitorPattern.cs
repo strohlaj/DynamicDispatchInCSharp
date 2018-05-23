@@ -17,9 +17,6 @@ namespace DomainWithVisitorPattern
 
     }
 
-    /// <summary>
-    /// The 'Visitor'
-    /// </summary>
     interface IEnemy
     {
         void SwingWeapon(WeaponVisitor weaponVisitor);
@@ -51,10 +48,7 @@ namespace DomainWithVisitorPattern
             WriteLine("swung mace");
         }
     }
-
-    /// <summary>
-    /// Depending on how we decide the 'visitor' 
-    /// </summary>
+    
     class Ogre : IEnemy
     {
         // The 'IEnemy.SwingWeapon(WeaponVisitor visitor)' method is bound at run time and is considered the first dispatch. 
